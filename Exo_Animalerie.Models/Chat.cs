@@ -18,7 +18,7 @@
 
         public override string Crier()
         {
-            return "Miaou !";
+            return "Miaou";
         }
         private void FairePousserGriffes()
         {

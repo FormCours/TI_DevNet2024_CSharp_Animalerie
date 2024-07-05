@@ -1,6 +1,6 @@
 ﻿namespace Exo_Animalerie.Models
 {
-    public class Animal
+    public abstract class Animal
     {
         public enum SexeEnum { M, F }
 
@@ -12,15 +12,9 @@
         public DateTime DateArrive { get; set; }
         public bool EstMort { get; private set; } = false;
 
-        protected virtual double ProbaliteDeces 
-        { 
-            get { return 100; } 
-        }
+        protected abstract double ProbaliteDeces { get; }
 
-        public virtual string Crier()
-        {
-            return "N/A";
-        }
+        public abstract string Crier();
 
         public virtual string GetDescription()
         {
